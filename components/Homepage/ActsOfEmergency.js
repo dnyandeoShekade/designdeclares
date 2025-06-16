@@ -81,19 +81,19 @@ export default function ActsOfEmergency() {
                   <div className="flex items-stretch w-full border-b border-black">
                     <span
                       className="
-                      text-[36px] font-normal text-black flex-shrink-0
-                      px-6 py-4 border-r border-black
+                      text-2xl md:text-3xl lg:text-[36px] font-normal text-black flex-shrink-0
+                      px-4 py-3 md:px-6 md:py-4 border-r border-black
                       flex items-center justify-center
                     "
                     >
                       {act.number}
                     </span>
-                    <h3 className="text-5xl font-normal text-black px-6 py-4 flex-grow">
+                    <h3 className="text-xl md:text-3xl lg:text-5xl font-normal text-black px-4 py-3 md:px-6 md:py-4 flex-grow">
                       {act.title}
                     </h3>
                   </div>
                   {/* Bottom section: Description */}
-                  <p className="text-base text-gray-700 leading-relaxed px-6 py-4">
+                  <p className="text-sm md:text-base text-gray-700 leading-relaxed px-4 py-3 md:px-6 md:py-4">
                     {act.description}
                   </p>
                 </div>

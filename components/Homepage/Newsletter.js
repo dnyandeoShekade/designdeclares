@@ -32,13 +32,13 @@ export default function Newsletter() {
 
   return (
     <div>
-      <section className="bg-black py-16 px-4 md:px-2">
+      <section className="bg-black py-8 px-4 md:py-16 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
             {/* Left Column - Heading */}
             <div className="lg:w-1/3">
               <div className="sticky top-8">
-                <h2 className="text-white font-bold text-lg ">
+                <h2 className="text-white font-bold text-xl md:text-2xl lg:text-3xl ">
                   The Design Declares Newsletter and <br /> Toolkit
                 </h2>
               </div>
@@ -47,14 +47,14 @@ export default function Newsletter() {
             {/* Right Column - Content */}
             <div className="lg:w-2/3 space-y-8">
               {/* Toolkit Preview Image */}
-              <div className="relative w-full h-64 md:h-80 lg:h-96">
+              <div className="relative w-full h-48 md:h-64 lg:h-96">
                 <div className="absolute inset-0 bg-gray-800 rounded-lg overflow-hidden">
                   {/* Toolkit Background with Text Overlay */}
                   <div className="relative w-full h-full bg-gradient-to-br from-gray-600 to-gray-800">
                     <Image
                       src="/background.webp"
-                      width={1200} // or your desired size
-                      height={800}
+                      fill
+                      style={{ objectFit: "cover" }}
                       alt="Background image"
                     />
                   </div>
@@ -63,7 +63,7 @@ export default function Newsletter() {
 
               {/* Description Text */}
               <div className="space-y-4">
-                <p className="text-white font-light text-lg leading-relaxed">
+                <p className="text-white font-light text-base leading-relaxed">
                   Subscribe to the Design Declares UK newsletter to receive the
                   latest news and updates. By signing up you will also gain
                   access to The Design Declares Toolkit, a live and evolving
@@ -71,7 +71,7 @@ export default function Newsletter() {
                   the latest resources and methods to help you on your journey
                   to climate-positive design.
                 </p>
-                <p className="text-white text-lg leading-relaxed">
+                <p className="text-white text-base leading-relaxed">
                   Every signatory to Design Declares will receive an access link
                   to the Toolkit. If you are unable to declare emergency quite
                   yet, you can still access the Toolkit - just register below.
@@ -89,7 +89,7 @@ export default function Newsletter() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full bg-transparent border border-white text-white placeholder-gray-400 px-3 py-4 text-lg focus:outline-none  transition-colors duration-200"
+                    className="w-full bg-transparent border border-white text-white placeholder-gray-400 px-4 py-3 text-base focus:outline-none focus:border-sky-400 transition-colors duration-200 rounded-md"
                   />
                 </div>
 
@@ -113,7 +113,7 @@ export default function Newsletter() {
                 <div>
                   <a
                     href="#"
-                    className="text-white text-sm underline hover:text-sky-400 transition-colors duration-200"
+                    className="text-white text-xs underline hover:text-sky-400 transition-colors duration-200"
                   >
                     View our Privacy Policy
                   </a>
@@ -123,7 +123,7 @@ export default function Newsletter() {
                 <div>
                   <button
                     type="submit"
-                    className="bg-white text-black font-semibold rounded-full px-8 py-3 hover:bg-gray-100 transition-colors duration-200"
+                    className="w-full bg-white text-black font-semibold py-3 px-6 rounded-md hover:bg-sky-400 hover:text-white transition-colors duration-200 text-base mt-4"
                   >
                     Subscribe
                   </button>
@@ -135,7 +135,6 @@ export default function Newsletter() {
       </section>
 
       {/* Fixed Bottom-Right Buttons */}
-
     </div>
   );
 }

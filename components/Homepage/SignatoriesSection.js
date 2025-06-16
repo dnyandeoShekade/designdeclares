@@ -1,222 +1,23 @@
-// export default function SignatoriesSection() {
-//     // Sample signatory data - in a real app this would come from an API
-//     const signatories = [
-//       "2LK",
-//       "21st Brands",
-//       "21% Studio",
-//       "3 Sided Cube",
-//       "A2 Design",
-//       "AEIOU",
-//       "Alias Aligned",
-//       "Alpha Websites",
-//       "APRE - A Creative",
-//       "Archetype Studio",
-//       "Active Medial",
-//       "Agile",
-//       "Airside",
-//       "Alchemystic",
-//       "Almodóvar Design Agency",
-//       "Aloof Design",
-//       "Altern Design Ltd",
-//       "Alan Dempsey",
-//       "Alexander Boxill",
-//       "Alexander Kent",
-//       "Alexander Lam Studio",
-//       "Alexander Tochilovsky",
-//       "Alexis Sommer",
-//       "Almo Sartori",
-//       "Aloof Design",
-//       "Andrew Carr",
-//       "Andy Fletcher",
-//       "Andy Potts",
-//       "Anja Dohse",
-//       "Annabelle Vella",
-//       "Antidote",
-//       "Applied Works",
-//       "Archetype Associates",
-//       "Archetype Studio",
-//       "Ariel Aguilera",
-//       "Avery & Brown",
-//       "BA (Hons) Graphic Design",
-//       "BA (Hons) Graphic Art",
-//       "Arts University",
-//       "Bournemouth",
-//       "Barnbrook Design",
-//       "Bergman School of Art",
-//       "Beatrice Lessi",
-//       "Ben Chatfield",
-//       "Barbara Chandler",
-//       "Barbara Chandler",
-//       "Barbara Chandler",
-//       "Barth Worlds",
-//       "Baxter & Bailey",
-//       "Baxter & Bailey",
-//       "Beau",
-//       "Ben Chatfield",
-//       "Ben Chatfield",
-//       "Ben Jessop",
-//       "Blackstock Limited",
-//       "Blackstock Limited",
-//       "Brita Design Office",
-//       "Bill Bragg",
-//       "Bill Bragg",
-//       "Big Motive",
-//       "Big Motive",
-//       "Big Motive",
-//     ]
-  
-//     // Add more signatories to demonstrate the full layout
-//     const allSignatories = [
-//       ...signatories,
-//       "Bloomsbury Innovation Lab",
-//       "Design by Mondial",
-//       "Francis Rowland",
-//       "Isadora",
-//       "Morphography Studio",
-//       "Olivia Studio Ltd",
-//       "Sheffield Hallam University",
-//       "The Manufacturing",
-//       "Blok",
-//       "Design Council",
-//       "Frankie Ratford",
-//       "Jack Bancroft",
-//       "Moritz",
-//       "Olivia Studio Ltd",
-//       "Simons Coop",
-//       "Technology Centre",
-//       "Blue State Digital",
-//       "Design for Joy",
-//       "Future Generations at",
-//       "James Aldred",
-//       "Moritz Cai Studio",
-//       "Olive Kittredge",
-//       "Social Change",
-//       "ThinkUp",
-//       "Boyles & Plants",
-//       "Design for Joy",
-//       "Future Generations at",
-//       "James Aldred",
-//       "Moritz Cai Studio",
-//       "Olive Kittredge",
-//       "Social Change",
-//       "ThinkUp",
-//       "Brand Sympathy",
-//       "Design Indaba",
-//       "Glow Collective",
-//       "James Greenfield",
-//       "Moss Editions Ltd",
-//       "Oli Kellett",
-//       "Sophie Blackmore",
-//       "Thirteen05 Consulting",
-//       "Brandalism",
-//       "Design Thinc",
-//       "Fullstop",
-//       "James Greenfield",
-//       "Moss Editions Ltd",
-//       "Oli Kellett",
-//       "Sophie Blackmore",
-//       "Thirteen05 Consulting",
-//       "Brandalism",
-//       "Design Thinc",
-//       "Fullstop Ltd",
-//       "James Greenfield",
-//       "Moss Editions Ltd",
-//       "Oli Kellett",
-//       "Sophie Blackmore",
-//       "Thirteen05 Consulting",
-//       "Brandalism",
-//       "Design Thinc",
-//       "Fullstop Ltd",
-//       "James Greenfield",
-//       "Moss Editions Ltd",
-//       "Oli Kellett",
-//       "Sophie Blackmore",
-//       "Thirteen05 Consulting",
-//       "ACRE - A Creative",
-//       "Design Works Ltd",
-//       "Future Brand",
-//       "James Greenfield",
-//       "Moss Editions Ltd",
-//       "Oli Kellett",
-//       "Sophie Blackmore",
-//       "Thirteen05 Consulting",
-//       "Active Medial",
-//       "Bright Signals Ltd",
-//       "Gemma Griffith",
-//       "GH Creative",
-//       "INTERROBANG",
-//       "ORCA",
-//       "Sniff Design",
-//       "Thane Reach",
-//       "Agile",
-//       "Bright Signals Ltd",
-//       "Gemma Griffith",
-//       "Green Nest Ltd",
-//       "Martin Hopkins",
-//       "Odin",
-//       "Sniff Design",
-//       "The Framestore & Co",
-//       "Airside",
-//       "Bright Signals Ltd",
-//       "Gemma Griffith",
-//       "Green Nest Ltd",
-//       "Martin Hopkins",
-//       "Odin",
-//       "Sniff Design",
-//       "The Framestore & Co",
-//     ]
-  
-//     return (
-//       <div>
-//         <section className="bg-black py-16 px-4 md:px-12">
-//           <div className="max-w-7xl mx-auto">
-//             {/* Top Left Corner - Count and Header */}
-//             <div className="mb-12">
-//               <div className="space-y-2">
-//                 <h2 className="text-white text-4xl md:text-5xl lg:text-6xl font-light">#513</h2>
-//                 <div className="flex items-center gap-2">
-//                   <span className="text-white text-sm md:text-base">Signatories and counting in</span>
-//                   <span className="bg-[#FF5630] text-white text-xs px-2 py-1 rounded font-medium">DI UK</span>
-//                 </div>
-//               </div>
-//             </div>
-  
-//             {/* Full Width Signatories List */}
-//             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-6 gap-y-1 text-sm">
-//               {allSignatories.map((signatory, index) => (
-//                 <div key={index} className="text-white hover:text-gray-300 transition-colors duration-200 py-1">
-//                   {signatory}
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </section>
-  
-//         {/* Fixed Bottom-Right Buttons */}
-        
-//       </div>
-//     )
-//   }
-  "use client"
+"use client";
 
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 export default function Component() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   // Animate the count up to 513
   useEffect(() => {
     const timer = setInterval(() => {
       setCount((prev) => {
         if (prev < 513) {
-          return prev + Math.ceil((513 - prev) / 10)
+          return prev + Math.ceil((513 - prev) / 10);
         }
-        return 513
-      })
-    }, 50)
+        return 513;
+      });
+    }, 50);
 
-    return () => clearInterval(timer)
-  }, [])
+    return () => clearInterval(timer);
+  }, []);
 
   const signatories = [
     "21:37",
@@ -741,38 +542,40 @@ export default function Component() {
     "Sense",
     "The Creative Bloc",
     "gavin lucan",
-    "Bea Jesso",
-    "Dave Crossland",
-    "Fiona Watkins Design",
-    "HOUSE OF HACKNEY",
-    "Lucy Watkins",
-    "Nuggets & Chips",
-    "Sense",
-    "The Creative Bloc",
-    "gavin lucan",
-  ]
+  ];
 
   return (
-    <div className="min-h-screen bg-black text-white p-6 md:p-8 lg:p-12">
+    <section className="bg-black py-8 px-4 md:py-16 md:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
+        {/* Top Left Corner - Count and Header */}
         <div className="mb-12">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-2">#{count}</h1>
-          <div className="flex items-center gap-2 text-2xl">
-            <span>Signatories and counting in</span>
-            <span className="bg-[#FF6340] text-white px-2 py-1 rounded text-sm font-medium">D&A</span>
+          <div className="space-y-2">
+            <h2 className="text-white text-4xl md:text-5xl lg:text-6xl font-light">
+              #{count}
+            </h2>
+            <div className="flex items-center gap-2">
+              <span className="text-white text-sm md:text-base">
+                Signatories and counting in
+              </span>
+              <span className="bg-[#FF5630] text-white text-xs px-2 py-1 rounded font-medium">
+                DI UK
+              </span>
+            </div>
           </div>
         </div>
 
-        {/* Signatories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-8 gap-y-1 text-sm leading-relaxed">
+        {/* Full Width Signatories List */}
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-x-3 gap-y-1 text-xs sm:text-sm md:text-base">
           {signatories.map((signatory, index) => (
-            <div key={index} className="text-white/90 hover:text-white transition-colors duration-200">
+            <div
+              key={index}
+              className="text-white hover:text-gray-300 transition-colors duration-200 py-1"
+            >
               {signatory}
             </div>
           ))}
         </div>
       </div>
-    </div>
-  )
+    </section>
+  );
 }

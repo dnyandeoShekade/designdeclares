@@ -44,17 +44,19 @@ export default function DeclareForm() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="container mx-auto px-4 py-4 max-w-7xl">
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-8 lg:gap-16">
+    <div className=" bg-black text-white py-4 sm:py-8 px-2 sm:px-4 md:px-8 lg:px-12">
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-4 sm:gap-8 lg:gap-16">
           {/* Left Column */}
-          <div className="space-y-6">
-            <h1 className="text-2xl font-bold">Declare Emergency Now</h1>
+          <div className="space-y-4 sm:space-y-6">
+            <h1 className="text-xl sm:text-2xl font-bold">
+              Declare Emergency Now
+            </h1>
           </div>
 
           {/* Right Column - Form */}
           <div>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-8">
               Design Declares is open to individuals and institutions working in
               industrial, digital, graphic, communication and service design. To
               declare here, you must be a company with an office in the UK
@@ -65,19 +67,19 @@ export default function DeclareForm() {
               this site.
             </p>
             <div
-              className={`border border-gray-700 p-8 rounded-lg w-full transform transition-all duration-700 ease-out ${
+              className={`border border-gray-700 p-4 sm:p-8 rounded-lg w-full transform transition-all duration-700 ease-out ${
                 showForm
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-20"
               }`}
             >
-              <h2 className="text-4xl font-light mb-8">
+              <h2 className="text-2xl sm:text-4xl font-light mb-4 sm:mb-8">
                 I am Declaring Emergency
               </h2>
 
-              <form className="space-y-6">
+              <form className="space-y-4 sm:space-y-6">
                 {/* Declaration Type */}
-                <div className="flex flex-wrap gap-x-8 gap-y-4">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-4">
                   {[
                     { value: "business", label: "As a business" },
                     { value: "individual", label: "As an individual" },
@@ -99,7 +101,7 @@ export default function DeclareForm() {
                           className="sr-only"
                         />
                         <div
-                          className={`w-12 h-12 border-2 cursor-pointer border-white ${
+                          className={`w-8 h-8 sm:w-12 sm:h-12 border-2 cursor-pointer border-white ${
                             declarationType === option.value
                               ? "bg-white"
                               : "bg-black"
@@ -108,7 +110,7 @@ export default function DeclareForm() {
                         >
                           {declarationType === option.value && (
                             <svg
-                              className="w-10 h-10 text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                              className="w-6 h-6 sm:w-10 sm:h-10 text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >
@@ -123,7 +125,7 @@ export default function DeclareForm() {
                       </div>
                       <label
                         htmlFor={option.value}
-                        className="text-sm cursor-pointer"
+                        className="text-xs leading-relaxed cursor-pointer"
                         onClick={() => setDeclarationType(option.value)}
                       >
                         {option.label}
@@ -135,25 +137,27 @@ export default function DeclareForm() {
                 {/* Combined Input Block */}
                 <div className="border border-gray-400 rounded-lg overflow-hidden">
                   {/* Website */}
-                  <div className="px-3 py-4 border-b border-gray-400">
+                  <div className="px-2 sm:px-3 py-3 sm:py-4 border-b border-gray-400">
                     <div className="flex items-center">
-                      <span className="text-gray-400 mr-2">Website:*</span>
+                      <span className="text-gray-400 mr-2 text-sm sm:text-base">
+                        Website:*
+                      </span>
                       <input
                         type="text"
                         id="website"
                         value={website}
                         onChange={(e) => setWebsite(e.target.value)}
-                        className="flex-grow bg-black text-white focus:outline-none border-none"
+                        className="flex-grow bg-black text-white focus:outline-none border-none text-sm sm:text-base"
                       />
                     </div>
                   </div>
 
                   {/* Country */}
-                  <div className="relative px-3 py-4 border-b border-gray-400">
+                  <div className="relative px-2 sm:px-3 py-3 sm:py-4 border-b border-gray-400">
                     <button
                       type="button"
                       onClick={() => setIsCountryOpen(!isCountryOpen)}
-                      className="w-full bg-black text-white text-left focus:outline-none flex justify-between items-center"
+                      className="w-full bg-black text-white text-left focus:outline-none flex justify-between items-center text-sm sm:text-base"
                     >
                       <div className="flex items-center flex-grow">
                         <span className="text-gray-400">
@@ -197,7 +201,7 @@ export default function DeclareForm() {
                   </div>
 
                   {/* Discipline */}
-                  <div className="relative px-3 py-4 border-b border-gray-400">
+                  <div className="relative px-2 sm:px-3 py-3 sm:py-4 border-b border-gray-400">
                     <button
                       type="button"
                       onClick={() => setIsDisciplineOpen(!isDisciplineOpen)}
@@ -247,34 +251,36 @@ export default function DeclareForm() {
                   </div>
 
                   {/* Email */}
-                  <div className="px-3 py-4 border-b border-gray-400">
+                  <div className="px-2 sm:px-3 py-3 sm:py-4 border-b border-gray-400">
                     <div className="flex items-center">
-                      <span className="text-gray-400 mr-2">Email:*</span>
+                      <span className="text-gray-400 mr-2 text-sm sm:text-base">
+                        Email:*
+                      </span>
                       <input
                         type="email"
                         id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="flex-grow bg-black text-white focus:outline-none border-none"
+                        className="flex-grow bg-black text-white focus:outline-none border-none text-sm sm:text-base"
                       />
                     </div>
                   </div>
 
                   {/* Reason */}
-                  <div className="px-3 py-4">
+                  <div className="px-2 sm:px-3 py-3 sm:py-4">
                     <textarea
                       id="reason"
                       value={reason}
                       onChange={(e) => setReason(e.target.value)}
-                      rows={5}
+                      rows={4}
                       placeholder="Why are you declaring? In a sentence or two, tell us why you're joining Design Declares."
-                      className="w-full bg-black text-white placeholder:text-gray-400 focus:outline-none resize-none border-none"
+                      className="w-full bg-black text-white placeholder:text-gray-400 focus:outline-none resize-none border-none text-sm sm:text-base"
                     />
                   </div>
                 </div>
 
                 {/* Checkboxes */}
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-start space-x-2">
                     <div className="relative mt-1">
                       <input
@@ -285,7 +291,7 @@ export default function DeclareForm() {
                         className="sr-only"
                       />
                       <div
-                        className={`w-12 h-12 border-2 cursor-pointer ${
+                        className={`w-8 h-8 sm:w-12 sm:h-12 border-2 cursor-pointer ${
                           agreeToTerms
                             ? "border-white bg-white"
                             : "border-white"
@@ -294,7 +300,7 @@ export default function DeclareForm() {
                       >
                         {agreeToTerms && (
                           <svg
-                            className="w-10 h-10 text-black"
+                            className="w-6 h-6 sm:w-10 sm:h-10 text-black"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -331,7 +337,7 @@ export default function DeclareForm() {
                         className="sr-only"
                       />
                       <div
-                        className={`w-12 h-12 border-2 cursor-pointer ${
+                        className={`w-8 h-8 sm:w-12 sm:h-12 border-2 cursor-pointer ${
                           subscribeToNewsletter
                             ? "border-white bg-white"
                             : "border-white"
@@ -342,7 +348,7 @@ export default function DeclareForm() {
                       >
                         {subscribeToNewsletter && (
                           <svg
-                            className="w-10 h-10 text-black"
+                            className="w-6 h-6 sm:w-10 sm:h-10 text-black"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -381,7 +387,7 @@ export default function DeclareForm() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="bg-white text-black hover:bg-gray-200 font-medium px-8 py-2 rounded-full transition-colors"
+                  className="w-full sm:w-auto bg-white text-black hover:bg-gray-200 font-medium px-6 sm:px-8 py-2 rounded-full transition-colors text-sm sm:text-base"
                 >
                   Declare Emergency Now
                 </button>

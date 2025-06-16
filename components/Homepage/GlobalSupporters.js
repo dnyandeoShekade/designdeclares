@@ -1,8 +1,18 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function GlobalSupporters() {
   const [count, setCount] = useState(0);
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
+  const opacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
+
   // Sample signatory data - in a real app this would come from an API
   const signatories = [
     "2LK",
@@ -192,7 +202,11 @@ export default function GlobalSupporters() {
 
   return (
     <div>
-      <section className="bg-black py-16 px-4 md:px-12">
+      <motion.section
+        ref={sectionRef}
+        className="bg-black py-16 px-4 md:px-12 rounded-b-3xl z-10 relative"
+        style={{ y, opacity }}
+      >
         <div className="max-w-7xl mx-auto">
           {/* Top Left Corner - Count and Header */}
           <div className="mb-12">
@@ -220,7 +234,7 @@ export default function GlobalSupporters() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Fixed Bottom-Right Buttons */}
     </div>

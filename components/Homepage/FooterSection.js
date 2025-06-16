@@ -212,8 +212,6 @@ export default function FooterSection() {
             </a>
           </motion.p>
         </motion.div>
-
-       
       </div>
     </motion.footer>
   )

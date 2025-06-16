@@ -160,14 +160,17 @@ export default function Latestsection() {
 
   return (
     <div>
-      <section className="bg-black py-16 px-4 md:px-12" ref={ref}>
+      <section
+        className="bg-black py-8 px-4 md:py-16 md:px-8 lg:px-12"
+        ref={ref}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
             {/* Left Column - Heading */}
             <div className="lg:w-1/3">
               <div className="sticky top-8">
                 <motion.h1
-                  className="text-white font-bold text-lg md:text-base"
+                  className="text-white font-bold text-xl md:text-2xl lg:text-3xl"
                   initial={{ opacity: 0, y: 30 }}
                   animate={
                     isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }

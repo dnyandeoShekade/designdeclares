@@ -40,19 +40,19 @@ export default function Breakdown() {
   ];
 
   return (
-    <div className="min-h-screen  bg-black text-white p-8 lg:p-12">
-      <div className="mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <div className="bg-black text-white px-4 py-6 sm:py-8 md:px-8 lg:px-12 lg:py-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12">
           {/* Left Column */}
           <div className="lg:col-span-4 flex flex-col justify-start">
-            <h2 className="text-xl font-bold">This is Breakdown</h2>
+            <h2 className="text-lg sm:text-xl font-bold">This is Breakdown</h2>
           </div>
 
           {/* Right Column */}
-          <div className="lg:col-span-8 space-y-12">
+          <div className="lg:col-span-8 space-y-6 sm:space-y-8 lg:space-y-12">
             {/* Big Text */}
-            <div className="mb-9">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-normal leading-tight">
+            <div className="mb-6 sm:mb-9">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal leading-tight">
                 The science is settled. We are in an emergency of climate and
                 nature. The world is past breaking point; the breakdown has
                 begun...
@@ -65,16 +65,18 @@ export default function Breakdown() {
                 <div key={item.id} className="border-b border-gray-500">
                   <button
                     onClick={() => toggleSection(item.id)}
-                    className="w-full py-4 flex justify-between items-center hover:bg-gray-900 transition-colors duration-200"
+                    className="w-full py-3 sm:py-4 flex justify-between items-center hover:bg-gray-900 transition-colors duration-200"
                   >
-                    <span className="text-lg text-gray-300">{item.title}</span>
-                    <span className="text-gray-300 text-xl">
+                    <span className="text-base sm:text-lg text-gray-300">
+                      {item.title}
+                    </span>
+                    <span className="text-gray-300 text-lg sm:text-xl">
                       {openSection === item.id ? "∧" : "∨"}
                     </span>
                   </button>
 
                   {openSection === item.id && (
-                    <div className="pb-8 pt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300 leading-relaxed">
+                    <div className="pb-6 sm:pb-8 pt-3 sm:pt-4 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 text-sm sm:text-base text-gray-300 leading-relaxed">
                       <p>{item.content.left}</p>
                       <p>{item.content.right}</p>
                     </div>
@@ -84,8 +86,8 @@ export default function Breakdown() {
             </div>
 
             {/* CTA */}
-            <div className="pt-8">
-              <button className="bg-white text-black font-bold px-6 py-3 rounded-full hover:bg-gray-100 transition-colors duration-200">
+            <div className="pt-6 sm:pt-8">
+              <button className="w-full sm:w-auto bg-white text-black font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-gray-100 transition-colors duration-200 text-sm sm:text-base">
                 View our D! Intro Video
               </button>
             </div>
