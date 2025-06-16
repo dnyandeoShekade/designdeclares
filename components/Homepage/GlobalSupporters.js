@@ -202,11 +202,7 @@ export default function GlobalSupporters() {
 
   return (
     <div>
-      <motion.section
-        ref={sectionRef}
-        className="bg-black py-16 px-4 md:px-12 rounded-b-3xl z-10 relative"
-        style={{ y, opacity }}
-      >
+      
         <div className="max-w-7xl mx-auto">
           {/* Top Left Corner - Count and Header */}
           <div className="mb-12">
@@ -234,7 +230,6 @@ export default function GlobalSupporters() {
             ))}
           </div>
         </div>
-      </motion.section>
 
       {/* Fixed Bottom-Right Buttons */}
     </div>
